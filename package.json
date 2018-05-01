@@ -1,0 +1,22 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/javafvr/portfolio.git"
+  },
+  "author": "Dmitriy Dolganov\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[i",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/javafvr/portfolio/issues"
+  },
+  "homepage": "https://github.com/javafvr/portfolio#readme"
+}
