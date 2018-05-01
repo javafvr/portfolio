@@ -10,7 +10,7 @@ gulp.task("server", ['less','pug'],function () {
 		server: { baseDir: './docs' }
 	});
       gulp.watch('**/*.html').on('change', browserSync.reload);
-	gulp.watch('js/**/*.js').on('change', browserSync.reload);
+	gulp.watch('docs/js/**/*.js', ['uglify']);
       gulp.watch('less/**/*.less', ['less'] );
       gulp.watch('pug/**/*.pug', ['pug'] );
 });
@@ -47,6 +47,14 @@ gulp.task('less', () => {
       .pipe(less())
       .pipe(gulp.dest('./docs/css'))
       .pipe(browserSync.stream());
+});
+
+// Uglify Task
+gulp.task('uglify', function(){
+  gulp.src('docs/js/*.js')
+    .pipe(plumber()) // plumber
+    //.pipe(uglify())
+    .pipe(gulp.dest('docs/js'))
 });
 
 gulp.task('default', ["server"]);
