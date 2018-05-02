@@ -10,6 +10,9 @@ html(lang='ru')
 		meta(name='description', content='Описание страницы...')
 		// Syles
 		link(rel='stylesheet', href='libs/bootstrap/css/bootstrap.min.css')
+		link(rel="stylesheet", href="fonts/noto-webfont/noto.css")
+		link(rel="stylesheet", href="fonts/notoserif/notoserif.css")
+		link(rel="stylesheet", href="fonts/font-awesome/css/font-awesome.css")
 		link(rel='stylesheet', href='css/main.css')
 		// FavIcons
 		link(rel='shortcut icon', href='img/favicons/favicon-48x48.ico', type='image/x-icon')
@@ -29,14 +32,32 @@ html(lang='ru')
 				|
 		//- Шапка страницы
 		.header
-			nav.navigation
-				ul
-					li Резюме
-					li Портфолио
-					li Контакты
-		
+			.header__inner
+				nav.navigation
+					.navigation__toggle.navigation__toggle--fixed
+						i(aria-hidden="true").fa.fa-bars
+					ul.navigation__list
+						li
+							a(href="#resume") Резюме
+						li
+							a(href="#portfolio") Портфолио
+						li
+							a(href="#contacts") Контакты
+				.header__centered-content
+					.user-photo.user-photo--shadow
+						img(src="usercontent/img/photo-small.jpg" alt="Мое фото")
+					h1.header__title Дмитрий Долганов
+					h2.header__subtitle HTML верстальщик сайтов 
+
+					a(href="#resume").mouse_scroll
+						.mouse
+							.wheel
+						div
+							span.m_scroll_arrows.unu
+							span.m_scroll_arrows.doi
+							span.m_scroll_arrows.trei
 		//- Фото с резюме
-		.container
+		.container#resume
 			.row
 				.hidden-xs.col-sm-2.col-lg-3
 					.block Фото
@@ -50,7 +71,7 @@ html(lang='ru')
 					.block Скачать резюме
 		.line
 		//- Портфолио
-		.container
+		.container#portfolio
 			.block Портфолио
 			.block Фильтр
 			.row
@@ -71,7 +92,7 @@ html(lang='ru')
 		
 		//- Подвал
 		.block-bg
-			.container
+			.container#contacts
 				.row
 					.col-sm-6.col-lg-6
 						.block Контакты Текст
@@ -91,4 +112,6 @@ html(lang='ru')
 
 	script(src='libs/jquery/jquery-1.11.2.min.js')
 	script(src='libs/bootstrap/js/bootstrap.min.js')
+	script(src="libs/pagescroll2id/jquery.malihu.PageScroll2id.js")
+	//- My script
 	script(src='js/main.js')
