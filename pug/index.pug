@@ -10,6 +10,9 @@ html(lang='ru')
 		meta(name='description', content='Описание страницы...')
 		// Syles
 		link(rel='stylesheet', href='libs/bootstrap/css/bootstrap.min.css')
+		link(rel="stylesheet", href="fonts/noto-webfont/noto.css")
+		link(rel="stylesheet", href="fonts/notoserif/notoserif.css")
+		link(rel="stylesheet", href="fonts/font-awesome/css/font-awesome.css")
 		link(rel='stylesheet', href='css/main.css')
 		// FavIcons
 		link(rel='shortcut icon', href='img/favicons/favicon-48x48.ico', type='image/x-icon')
@@ -29,28 +32,84 @@ html(lang='ru')
 				|
 		//- Шапка страницы
 		.header
-			nav.navigation
-				ul
-					li Резюме
-					li Портфолио
-					li Контакты
-		
-		//- Фото с резюме
-		.container
-			.row
-				.hidden-xs.col-sm-2.col-lg-3
-					.block Фото
-				.col-sm-10.col-lg-9
-					.block Резюме
-					.row
-						.col-sm-6
-							.block Опыт работы
-						.col-sm-6
-							.block Образование
-					.block Скачать резюме
-		.line
+			.header__inner
+				nav.navigation
+					.navigation__toggle.navigation__toggle--fixed
+						i(aria-hidden="true").fa.fa-bars
+					ul.navigation__list
+						li
+							a(href="#resume") Резюме
+						li
+							a(href="#portfolio") Портфолио
+						li
+							a(href="#contacts") Контакты
+				.header__centered-content
+					.user-photo.user-photo--shadow
+						img(src="usercontent/img/photo-small.jpg" alt="Мое фото")
+					h1.header__title Дмитрий Долганов
+					h2.header__subtitle HTML верстальщик сайтов 
+
+					a(href="#resume").mouse_scroll
+						.mouse
+							.wheel
+						div
+							span.m_scroll_arrows.unu
+							span.m_scroll_arrows.doi
+							span.m_scroll_arrows.trei
+		//- Резюме
+		.section.section--bottom-line.section--bg-laptop#resume
+			.container
+				//- Фото с резюме
+				.row
+					.hidden-xs.col-sm-2.col-lg-3
+						.user-photo.user-photo--big
+							img(src="usercontent/img/photo-big.jpg" alt="Мое фото")
+					.col-sm-10.col-lg-9
+						.heading Резюме
+						p
+							strong Дмитрий Долганов
+							br
+							|   36 лет, Тюмень, Россия
+							p Родился и вырос. Закончил три класса церковно-приходской IT школы. После чего «активно занимался самообразованием».
+
+						//- Опыт и образование
+						.row
+							.col-sm-6
+								.heading.heading--medium Опыт работы
+								ul.definition-list
+									li.definition-list__item 
+										.definition-list__def Декабрь — настоящее время
+										.definition-list__desc
+											p Верстальщик в веб-студии “Веб-Старт”.
+									li.definition-list__item
+										.definition-list__def октябрь 2015 — Декабрь 2016
+										.definition-list__desc
+											p Фрилансер, веб-дизайнер.
+									li.definition-list__item
+										.definition-list__def Сентбярь 2014 — Октябрь 2015
+										.definition-list__desc
+											p «ООО Кибер Софт» — Системный администратор.
+							.col-sm-6
+								.heading.heading--medium Образование
+								ul.definition-list
+									li.definition-list__item
+										.definition-list__def Апрель - июнь 2018
+										.definition-list__desc
+											p Курсы по веб-разработке (Frontend и Backend) от Webcademy.ru
+									li.definition-list__item 
+										.definition-list__def Март - май 2018
+										.definition-list__desc
+											p Курсы по верстке сайтов HTML5, CSS3 - WebCademy.ru
+									li.definition-list__item
+										.definition-list__def Сентбярь 1999 — Май 2003
+										.definition-list__desc
+											p Тюменский Государственный колледж связи, информатики и управления, техник связи.
+						.button 
+							i(aria-hidden="true").fa.fa-download 
+							|Скачать резюме
+		//- .line
 		//- Портфолио
-		.container
+		.container#portfolio
 			.block Портфолио
 			.block Фильтр
 			.row
@@ -71,7 +130,7 @@ html(lang='ru')
 		
 		//- Подвал
 		.block-bg
-			.container
+			.container#contacts
 				.row
 					.col-sm-6.col-lg-6
 						.block Контакты Текст
@@ -88,7 +147,10 @@ html(lang='ru')
 			.block © 2018 Дмитрий Долганов
 		//- Подвал конец
 		
-
+	//- Vendor scripts
 	script(src='libs/jquery/jquery-1.11.2.min.js')
 	script(src='libs/bootstrap/js/bootstrap.min.js')
+	script(src="libs/pagescroll2id/jquery.malihu.PageScroll2id.js")
+	//- My scripts
+	script(src='js/navigation.js')
 	script(src='js/main.js')

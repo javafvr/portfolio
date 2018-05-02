@@ -10,7 +10,7 @@ gulp.task("server", ['less','pug'],function () {
 		server: { baseDir: './docs' }
 	});
       gulp.watch('**/*.html').on('change', browserSync.reload);
-	gulp.watch('docs/js/**/*.js', ['uglify']);
+	gulp.watch('docs/js/**/*.js').on('change', browserSync.reload);
       gulp.watch('less/**/*.less', ['less'] );
       gulp.watch('pug/**/*.pug', ['pug'] );
 });
@@ -35,7 +35,7 @@ gulp.task('pug', () => {
 });
 
 gulp.task('less', () => {
-    return gulp.src('./less/**/main.less')
+    return gulp.src('./less/**/*.less')
       .pipe(plumber({
             errorHandler: notify.onError(function(err){
                   return {
@@ -45,16 +45,16 @@ gulp.task('less', () => {
             })
       }))
       .pipe(less())
-      .pipe(gulp.dest('./docs/css'))
+      .pipe(gulp.dest('docs/css'))
       .pipe(browserSync.stream());
 });
 
-// Uglify Task
-gulp.task('uglify', function(){
-  gulp.src('docs/js/*.js')
-    .pipe(plumber()) // plumber
-    //.pipe(uglify())
-    .pipe(gulp.dest('docs/js'))
-});
+// // Uglify Task
+// gulp.task('uglify', function(){
+//   gulp.src('docs/js/*.js')
+//     .pipe(plumber()) // plumber
+//     //.pipe(uglify())
+//     .pipe(gulp.dest('docs/js'))
+// });
 
 gulp.task('default', ["server"]);

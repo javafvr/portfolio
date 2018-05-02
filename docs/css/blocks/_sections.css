@@ -1,0 +1,6 @@
+.section {
+  padding-top: 70px;
+}
+.section--bottom-line {
+  border-bottom: 1px solid #e9eff3;
+}
