@@ -109,16 +109,9 @@ p {
   margin-top: 30px;
   margin-bottom: 30px;
 }
-.block-bg {
-  background-color: #065A97;
-  padding: 30px 0;
-}
 .block-bg-copyright {
   background-color: #003f6d;
   padding: 30px 0;
-}
-.line {
-  border-top: 1px solid #e9eff3;
 }
 /*==========  Desktop First Method  ==========*/
 /* Large Devices, Wide Screens - adaptive styles bofore 1200px */
@@ -163,6 +156,15 @@ p {
     background-image: url('../img/bg/gear.png');
   }
 }
+.section--bg-cloud {
+  background-repeat: no-repeat;
+  background-position: right 70%;
+}
+@media (min-width: 1500px) {
+  .section--bg-cloud {
+    background-image: url('../img/bg/cloud.png');
+  }
+}
 .section--padding-smaller {
   padding-top: 26px;
   padding-bottom: 50px;
@@ -182,7 +184,6 @@ p {
 .heading {
   font-size: 32px;
   font-weight: 700;
-  padding-top: 5px;
   margin: 0 0 8px;
   color: #0052c2;
 }
@@ -197,10 +198,13 @@ p {
   line-height: 28px;
   font-weight: 700;
   color: #000;
-  margin: 16px 0 15px;
+  margin: 20px 0 20px;
 }
 .heading--center {
   text-align: center;
+}
+.heading--white {
+  color: #FFF;
 }
 .definition-list {
   margin: 0  0 43px;
@@ -258,6 +262,7 @@ p {
 }
 @media (min-width: 768px) {
   .filter-block .filter-block__element {
+    margin-bottom: 0;
     margin-right: 0px;
     display: inline-block;
   }
@@ -437,6 +442,22 @@ p {
     font-size: 16px;
     line-height: 24px;
   }
+}
+.social-icons {
+  padding-top: 19px;
+  font-size: 32px;
+  color: #FFF;
+}
+.social-icons .fa {
+  margin-right: 30px;
+  margin-bottom: 20px;
+}
+.social-icons .fa:last-child {
+  margin-right: 0;
+}
+.social-icons a {
+  text-decoration: none;
+  border-bottom: none!important;
 }
 .button {
   display: inline-block;
@@ -836,4 +857,45 @@ a.mouse_scroll {
   .header__centered-content {
     margin-top: -261px;
   }
+}
+.contacts {
+  color: #FFF;
+  background-color: #065a97;
+}
+.contacts p {
+  color: #FFF;
+}
+.contacts a {
+  margin: 0;
+  padding: 0;
+  color: #FFF;
+  text-decoration: none;
+  border-bottom: 1px dotted;
+  cursor: pointer;
+}
+.contacts a:hover,
+.contacts a:focus,
+.contacts a:active {
+  color: #ffe400;
+  border-bottom: 1px dotted #ffe400;
+}
+.contacts-list {
+  padding: 0;
+  margin: 0;
+}
+.contacts-list__item {
+  padding-bottom: 22px;
+  list-style-type: none;
+}
+.contacts__descr {
+  font-size: 16px;
+  line-height: 28px;
+  color: #FFF;
+  margin-bottom: 30px;
+}
+.contacts-list__title {
+  font-size: 16px;
+  line-height: 28px;
+  color: #A2D1F4;
+  text-transform: uppercase;
 }

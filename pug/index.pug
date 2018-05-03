@@ -74,7 +74,6 @@ html(lang='ru')
 							br
 							|   36 лет, Тюмень, Россия
 							p Родился и вырос. Закончил три класса церковно-приходской IT школы. После чего «активно занимался самообразованием».
-
 						//- Опыт и образование
 						.row
 							.col-sm-6
@@ -198,19 +197,60 @@ html(lang='ru')
 			//- Портфолио конец
 		
 		//- Подвал
-		.block-bg
+		.block-bg.contacts.section.section--padding-smaller.section--bg-cloud
 			.container#contacts
 				.row
+					//- contacts
 					.col-sm-6.col-lg-6
-						.block Контакты Текст
+						.heading.heading--white Контакты
+						.contacts__descr 
+							p Если вы ищите специалиста по верстке сайтов, front-end разработчика в команду или для работы над проектом —  я к вашим услугам.
 						.row
+							//- e-mail, skype
 							.col-sm-12.col-lg-6
-								.block email, skype
+								ul.contacts-list
+									li.contacts-list__item 
+										.contacts-list__title email
+										.contacts-list__descr
+											p
+												a(href="mailto:inet72@gmail.com" target="_blank") inet72@gmail.com
+
+									li.contacts-list__item
+										.contacts-list__title skype
+										.contacts-list__descr
+											p
+												a(href="skype:dolganovdn?chat" target="_blank") dolganovdn
+							//- phone, address
 							.col-sm-12.col-lg-6
-								.block Телефон, адрес
-						.block Социальные сети
+								ul.contacts-list
+									li.contacts-list__item 
+										.contacts-list__title телефон
+										.contacts-list__descr
+											p
+												a(href="tel:+7(909)182-41-69" target="_blank") +7(909)182-41-69
+
+									li.contacts-list__item
+										.contacts-list__title адрес
+										.contacts-list__descr
+											p
+												a(href="#") 625000, Россия, Тюмень
+						//- Social
+						ul.contacts-list
+									li.contacts-list__item
+										.contacts-list__title ссоциальные сети
+											.contacts-list__descr
+												.social-icons
+													a(href="https://vk.com/id1908108"  aria-hidden="true" target="_blank").fa.fa-vk
+													a(href="https://www.instagram.com/scriptolog/" aria-hidden="true" target="_blank").fa.fa-instagram
+													a(href="https://github.com/javafvr" aria-hidden="true" target="_blank").fa.fa-github
+													a(href="https://codepen.io/inet72/" aria-hidden="true" target="_blank").fa.fa-codepen
+													a(href="https://www.facebook.com/scriptolog" aria-hidden="true" target="_blank").fa.fa-facebook
+						//- Contacts, feedback
 					.col-sm-6.col-lg-6
-						.block Форма связи
+						.heading.heading--medium Связаться со мной
+						//- Имя
+
+
 		//- Копирайт
 		.block-bg-copyright 
 			.block © 2018 Дмитрий Долганов
