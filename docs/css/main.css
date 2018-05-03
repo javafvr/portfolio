@@ -835,6 +835,6 @@ a.mouse_scroll {
 }
 @media (min-width: 1200px) {
   .header__centered-content {
-    margin-top: -261px;
+    margin-top: -150px;
   }
 }
