@@ -826,11 +826,11 @@ a.mouse_scroll {
 }
 .header__centered-content {
   display: inline-block;
-  margin-top: -186px;
+  margin-top: -72px;
 }
 @media (min-width: 768px) {
   .header__centered-content {
-    margin-top: -130px;
+    margin-top: -13px;
   }
 }
 @media (min-width: 1200px) {
