@@ -8,6 +8,11 @@ $(document).ready(function() {
 	// mixItUp2 фильтр работ в портфолио
 	$('#portfolio-projects').mixItUp();
 
+	// Переключалка для фильтра
+	$('.filter-block span').on("click", function(){
+		$('.filter-block .filter-block__button--active').removeClass('filter-block__button--active');
+		$(this).addClass('filter-block__button--active');
+	});
 
 	// FancyBox
 	$(".fancybox").fancybox({
