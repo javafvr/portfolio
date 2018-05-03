@@ -259,6 +259,7 @@ p {
 @media (min-width: 768px) {
   .filter-block .filter-block__element {
     margin-right: 0px;
+    margin-bottom: 0;
     display: inline-block;
   }
 }
