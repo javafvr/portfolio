@@ -109,24 +109,37 @@ html(lang='ru')
 							|Скачать резюме
 		//- .line
 		//- Портфолио
-		.container#portfolio
-			.block Портфолио
-			.block Фильтр
-			.row
-				.col-sm-4
-					.block Работа 1
-				.col-sm-4
-					.block Работа 2
-				.col-sm-4
-					.block Работа 3
-			.row
-				.col-sm-4
-					.block Работа 4
-				.col-sm-4
-					.block Работа 5
-				.col-sm-4
-					.block Работа 6
-		//- Портфолио конец
+		.section.section--padding-smaller.section--bg-gear#portfolio
+			.container
+				.heading.heading--center Мои работы
+				.filter
+					ul.filter__block
+						li.filter__element
+							span.filter__button.filter__button--active Все
+						li.filter__element
+							span.filter__button HTML+CSS
+						li.filter__element
+							span.filter__button Bootstrap
+						li.filter__element
+							span.filter__button Учебные
+						li.filter__element
+							span.filter__button На заказ
+
+				.row
+					.col-sm-4
+						.block Работа 1
+					.col-sm-4
+						.block Работа 2
+					.col-sm-4
+						.block Работа 3
+				.row
+					.col-sm-4
+						.block Работа 4
+					.col-sm-4
+						.block Работа 5
+					.col-sm-4
+						.block Работа 6
+			//- Портфолио конец
 		
 		//- Подвал
 		.block-bg
