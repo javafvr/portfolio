@@ -584,6 +584,42 @@ p {
 .contact-form__input--col-6:last-of-type {
   margin-right: 0;
 }
+label.error {
+  position: relative;
+  background-color: #c62828;
+  display: block;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+  color: #FFF;
+  padding: 5px 15px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  margin-top: 2px;
+}
+label.error:after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 20px;
+  margin-left: -12px;
+  width: 0;
+  height: 0;
+  border-bottom: 12px solid #c62828;
+  border-right: 12px solid transparent;
+  border-left: 12px solid transparent;
+}
+.contact-form__success {
+  background-color: #FFF;
+  position: relative;
+  display: block;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+  color: #43a047;
+  padding: 5px 15px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  margin-top: 2px;
+}
 .button {
   display: inline-block;
   height: 48px;
@@ -598,10 +634,33 @@ p {
   color: #FFF;
   background-color: #0052c2;
   box-shadow: 0px 3px 15px 0px #0052c2;
+  -webkit-transition: all 0.4s ease-in;
+  -moz-transition: all 0.4s ease-in;
+  -ms-transition: all 0.4s ease-in;
+  -o-transition: all 0.4s ease-in;
+  transition: all 0.4s ease-in;
 }
 .button .fa {
   font-size: 18px;
   margin-right: 8px;
+}
+.button:hover {
+  outline: none!important;
+  color: #065a97;
+  background-color: #FFF;
+  border-color: #FFF;
+}
+.button:active {
+  outline: none!important;
+  color: #ffe400;
+  background: #065a97;
+  border-color: #ffe400;
+}
+.button:focus {
+  color: #FFF;
+}
+a.button {
+  text-decoration: none;
 }
 .navigation {
   font-size: 18px;

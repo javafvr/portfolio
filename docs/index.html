@@ -112,8 +112,7 @@
                   </li>
                 </ul>
               </div>
-            </div>
-            <div class="button"> <i class="fa fa-download" aria-hidden="true"> </i>Скачать резюме</div>
+            </div><a class="button" href="usercontent/pdf/CV(DolganovDN).pdf" download="CV"><i class="fa fa-download" aria-hidden="true"> </i>Скачать резюме</a>
           </div>
         </div>
       </div>
@@ -230,18 +229,22 @@
           </div>
           <div class="col-sm-6 col-lg-6">
             <div class="heading heading--medium heading--white">Связаться со мной</div>
-            <form class="contact-form">
+            <form class="contact_form contact-form" id="contact-form">
+              <input type="hidden" name="project_name" value="Сайт Портфолио">
+              <input type="hidden" name="admin_email" value="info@dolganovdn.ru, ddolganv@yandex.ru">
+              <input type="hidden" name="form_subject" value="Сообщение с сайта">
               <input class="contact-form__input" type="text" name="name" placeholder="Имя">
               <input class="contact-form__input" type="text" name="email" placeholder="e-mail">
-              <div class="wrapper">
+              <div class="wrapper clearfix">
                 <input class="contact-form__input contact-form__input--col-6" type="text" name="skype" placeholder="Skype">
                 <input class="contact-form__input contact-form__input--col-6" type="text" name="phone" placeholder="Телефон">
               </div>
               <div class="contact-form__bg-pencil">
-                <textarea class="contact-form__textarea" placeholder="Ваше сообщение"></textarea>
+                <textarea class="contact-form__textarea" placeholder="Ваше сообщение" name="message"></textarea>
               </div>
               <input class="contact-form__submit" type="submit" name="" value="Отправить">
             </form>
+            <div id="answer"></div>
           </div>
         </div>
       </div>
@@ -258,6 +261,7 @@
   <script src="libs/bootstrap/js/bootstrap.min.js"></script>
   <script src="libs/pagescroll2id/jquery.malihu.PageScroll2id.js"></script>
   <script src="libs/mixitup2/jquery.mixitup.min.js"></script>
+  <script src="libs/jquery.validate/jquery.validate.js"></script>
   <script src="libs/fancybox/jquery.fancybox.js"></script>
   <script src="libs/jquery/jquery.mousewheel-3.0.6.pack.js"></script>
   <script src="libs/fancybox/jquery.fancybox.pack.js"></script>

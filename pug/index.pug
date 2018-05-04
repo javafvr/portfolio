@@ -109,7 +109,7 @@ html(lang='ru')
 										.definition-list__def Сентбярь 1999 — Май 2003
 										.definition-list__desc
 											p Тюменский Государственный колледж связи, информатики и управления, техник связи.
-						.button 
+						a.button(href="usercontent/pdf/CV(DolganovDN).pdf" download="CV")
 							i(aria-hidden="true").fa.fa-download 
 							|Скачать резюме
 		//- .line
@@ -250,15 +250,23 @@ html(lang='ru')
 						//- Contacts, feedback
 					.col-sm-6.col-lg-6
 						.heading.heading--medium.heading--white Связаться со мной
-						form.contact-form
+						form(class="contact_form").contact-form#contact-form
+
+							//- Hidden Required Fields
+							input(type="hidden" name="project_name" value="Сайт Портфолио")
+							input(type="hidden" name="admin_email" value="info@dolganovdn.ru, ddolganv@yandex.ru")
+							input(type="hidden" name="form_subject" value="Сообщение с сайта")
+							//- END Hidden Required Fields
+
 							input(type="text" class="contact-form__input" name="name" placeholder="Имя")
 							input(type="text" class="contact-form__input" name="email" placeholder="e-mail")
-							.wrapper
+							.wrapper.clearfix
 								input(type="text" class="contact-form__input contact-form__input--col-6" name="skype" placeholder="Skype")
 								input(type="text" class="contact-form__input contact-form__input--col-6" name="phone" placeholder="Телефон")
 							.contact-form__bg-pencil
-								textarea(class="contact-form__textarea" placeholder="Ваше сообщение")
+								textarea(class="contact-form__textarea" placeholder="Ваше сообщение" name="message")
 							input(type="submit" class="contact-form__submit" name="" value="Отправить")
+						#answer
 						//- Имя
 		//- Копирайт
 		.copyright 
@@ -274,6 +282,7 @@ html(lang='ru')
 	script(src='libs/bootstrap/js/bootstrap.min.js')
 	script(src="libs/pagescroll2id/jquery.malihu.PageScroll2id.js")
 	script(src="libs/mixitup2/jquery.mixitup.min.js")
+	script(src="libs/jquery.validate/jquery.validate.js")
 	//- For fancyBox
 	script(src="libs/fancybox/jquery.fancybox.js")
 	script(src="libs/jquery/jquery.mousewheel-3.0.6.pack.js")

@@ -22,4 +22,51 @@ $(document).ready(function() {
 				}
 			}
 	});
+
+	// jquery validate
+	$('#contact-form').validate({
+		rules: {
+			name: { required:true },
+			email: { required:true, email: true},
+			// skype: { required:true },
+			// phone: { required:true },
+			message: { required: true }
+		},
+		messages: {
+			name: 'Пожалуйста, введите свое имя',
+			email: { 
+				required: "Пожалуйста введите свой email",
+				email: "Email адрес должен быть в формате name@domain.com. Возможно, Вы ввели с ошибкой"
+			},
+			message: 'Пожалуйста, введите текст сообщения',
+
+
+		},
+
+		submitHandler: function (form) {
+			ajaxSubmit();
+		}
+	})
+
+	function ajaxSubmit() {
+		$('#contact-form').submit(function() {
+			var string = $(this).serialize(); //Сохраним данные ввведенные в форму
+
+			// формируем запрос
+			$.ajax({
+				type: "POST", //Тип запроса пост
+				url: "php/mail.php",
+				data: string,
+
+				success: function(html) {
+					$("#contact-form").slideUp(800);
+					$("#answer").html(html).fadeOut(6000);
+				} 
+			});
+			
+			return false;
+		});
+	}
+
+
 });
