@@ -265,6 +265,9 @@ p {
   }
 }
 .filter-block .filter-block__button {
+  -webkit-transition: border-color 1000ms ease-in-out;
+  -moz-transition: border-color 1000ms ease-in-out;
+  transition: border-color 1000ms ease-in-out;
   display: inline-block;
   padding: 7px 30px 8px;
   cursor: pointer;

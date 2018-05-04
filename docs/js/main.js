@@ -49,7 +49,8 @@ $(document).ready(function() {
 	})
 
 	function ajaxSubmit() {
-		$('#contact-form').submit(function() {
+		$('#contact-form').submit(function(e) {
+
 			var string = $(this).serialize(); //Сохраним данные ввведенные в форму
 
 			// формируем запрос
@@ -63,8 +64,9 @@ $(document).ready(function() {
 					$("#answer").html(html).fadeOut(6000);
 				} 
 			});
+			console.log("z nen");
+		return false;
 			
-			return false;
 		});
 	}
 

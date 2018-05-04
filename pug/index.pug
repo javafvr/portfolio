@@ -72,11 +72,19 @@ html(lang='ru')
 							img(src="usercontent/img/photo-big.jpg" alt="Мое фото")
 					.col-sm-10.col-lg-9
 						.heading Резюме
+						//- p
+						//- 	strong Дмитрий Долганов
+						//- 	br
+						//- 	|   36 лет, Тюмень, Россия
+						//- 	p Родился и вырос. Закончил три класса церковно-приходской IT школы. После чего «активно занимался самообразованием».
 						p
 							strong Дмитрий Долганов
 							br
-							|   36 лет, Тюмень, Россия
-							p Родился и вырос. Закончил три класса церковно-приходской IT школы. После чего «активно занимался самообразованием».
+							| 36 лет, Тюмень, Россия
+						p
+							| Родился и вырос. Закончил три класса церковно-приходской IT школы. После чего «активно занимался самообразованием».
+
+
 						//- Опыт и образование
 						.row
 							.col-sm-6
@@ -134,7 +142,7 @@ html(lang='ru')
 					.col-sm-4.mix.html-css.tutorial
 						.portfolio-item
 							.portfolio-item__image
-								a(href="usercontent/img/full/organic.png" rel="group" title="Учебный макет Organica").portfolio-item__image__hover.fancybox
+								a(href="usercontent/img/full/organic.png"  data-fancybox-group="group1" title="Учебный макет Organica").portfolio-item__image__hover.fancybox
 									i(aria-hidden="true").fa.fa-search 
 									br
 									span смотреть макет 
@@ -145,7 +153,7 @@ html(lang='ru')
 					.col-sm-4.mix.bootstrap.tutorial
 						.portfolio-item
 							.portfolio-item__image
-								a(href="usercontent/img/full/apollo.png" rel="group" title="Учебный макет Аполло").portfolio-item__image__hover.fancybox
+								a(href="usercontent/img/full/apollo.png"  data-fancybox-group="group1" title="Учебный макет Аполло").portfolio-item__image__hover.fancybox
 									i(aria-hidden="true").fa.fa-search 
 									br
 									span смотреть макет 
@@ -156,7 +164,7 @@ html(lang='ru')
 					.col-sm-4.mix.bootstrap.tutorial
 						.portfolio-item
 							.portfolio-item__image
-								a(href="usercontent/img/full/portfolio.png" rel="group" title="Личный сайт портфолио").portfolio-item__image__hover.fancybox
+								a(href="usercontent/img/full/portfolio.png"  data-fancybox-group="group1" title="Личный сайт портфолио").portfolio-item__image__hover.fancybox
 									i(aria-hidden="true").fa.fa-search 
 									br
 									span смотреть макет 
@@ -167,7 +175,7 @@ html(lang='ru')
 					.col-sm-4.mix.html-css.payed
 						.portfolio-item
 							.portfolio-item__image
-								a(href="usercontent/img/full/car-concept.png" rel="group" title="Промо сайт автомобиля").portfolio-item__image__hover.fancybox
+								a(href="usercontent/img/full/car-concept.png"  data-fancybox-group="group1" title="Промо сайт автомобиля").portfolio-item__image__hover.fancybox
 									i(aria-hidden="true").fa.fa-search 
 									br
 									span смотреть макет 
@@ -178,7 +186,7 @@ html(lang='ru')
 					.col-sm-4.mix.html-css.payed
 						.portfolio-item
 							.portfolio-item__image
-								a(href="usercontent/img/full/motorcycles.jpg" rel="group" title="Магазин мотоциклов").portfolio-item__image__hover.fancybox
+								a(href="usercontent/img/full/motorcycles.jpg"  data-fancybox-group="group1" title="Магазин мотоциклов").portfolio-item__image__hover.fancybox
 									i(aria-hidden="true").fa.fa-search 
 									br
 									span смотреть макет 
@@ -189,7 +197,7 @@ html(lang='ru')
 					.col-sm-4.mix.html-css.payed
 						.portfolio-item.portfolio-item--last
 							.portfolio-item__image
-								a(href="usercontent/img/full/music.jpg" rel="group" title="Магазин аудиотехники").portfolio-item__image__hover.fancybox
+								a(href="usercontent/img/full/music.jpg"  data-fancybox-group="group1" title="Магазин аудиотехники").portfolio-item__image__hover.fancybox
 									i(aria-hidden="true").fa.fa-search 
 									br
 									span смотреть макет 
@@ -265,7 +273,7 @@ html(lang='ru')
 								input(type="text" class="contact-form__input contact-form__input--col-6" name="phone" placeholder="Телефон")
 							.contact-form__bg-pencil
 								textarea(class="contact-form__textarea" placeholder="Ваше сообщение" name="message")
-							input(type="submit" class="contact-form__submit" name="" value="Отправить")
+							input(type="submit" class="contact-form__submit" name="submit" value="Отправить")
 						#answer
 						//- Имя
 		//- Копирайт
@@ -277,18 +285,16 @@ html(lang='ru')
 					a(href="http://www.WebCademy.ru" target="_blank") WebCademy.ru
 		//- Подвал конец
 		
-	//- Vendor scripts
-	script(src='libs/jquery/jquery-1.11.2.min.js')
-	script(src='libs/bootstrap/js/bootstrap.min.js')
-	script(src="libs/pagescroll2id/jquery.malihu.PageScroll2id.js")
-	script(src="libs/mixitup2/jquery.mixitup.min.js")
-	script(src="libs/jquery.validate/jquery.validate.js")
-	//- For fancyBox
-	script(src="libs/fancybox/jquery.fancybox.js")
-	script(src="libs/jquery/jquery.mousewheel-3.0.6.pack.js")
-	script(src="libs/fancybox/jquery.fancybox.pack.js")
-
-
-	//- My scripts
-	script(src='js/navigation.js')
-	script(src='js/main.js')
+		//- Vendor scripts
+		script(src='libs/jquery/jquery-1.11.2.min.js')
+		script(src='libs/bootstrap/js/bootstrap.min.js')
+		script(src="libs/pagescroll2id/jquery.malihu.PageScroll2id.js")
+		script(src="libs/mixitup2/jquery.mixitup.min.js")
+		script(src="libs/jquery.validate/jquery.validate.js")
+		//- For fancyBox
+		script(src="libs/fancybox/jquery.fancybox.js")
+		script(src="libs/jquery/jquery.mousewheel-3.0.6.pack.js")
+		script(src="libs/fancybox/jquery.fancybox.pack.js")
+		//- My scripts
+		script(src='js/navigation.js')
+		script(src='js/main.js')
