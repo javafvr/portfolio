@@ -1,5 +1,5 @@
 .section {
-  padding-top: 25px;
+  padding-top: 28px;
   padding-bottom: 40px;
 }
 @media (min-width: 768px) {
@@ -46,7 +46,7 @@
 }
 .section--padding-smaller {
   padding-top: 26px;
-  padding-bottom: 50px;
+  padding-bottom: 48px;
 }
 @media (min-width: 768px) {
   .section--padding-smaller {

@@ -37,8 +37,11 @@ html(lang='ru')
 		.header
 			.header__inner
 				nav.navigation
-					.navigation__toggle.navigation__toggle--fixed
-						i(aria-hidden="true").fa.fa-bars
+					//- Navigation icon
+					//- .navigation__toggle.navigation__toggle--fixed
+					//- 	i(aria-hidden="true").fa.fa-bars
+					button#navigation__button.cmn-toggle-switch.cmn-toggle-switch__htx
+						span toggle menu
 					ul.navigation__list
 						li
 							a(href="#resume") Резюме
