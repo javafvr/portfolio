@@ -167,7 +167,7 @@
             </div>
           </div>
           <div class="col-sm-4 mix html-css payed">
-            <div class="portfolio-item">
+            <div class="portfolio-item portfolio-item--last">
               <div class="portfolio-item__image"><a class="portfolio-item__image__hover fancybox" href="usercontent/img/full/music.jpg" rel="group" title="Магазин аудиотехники"><i class="fa fa-search" aria-hidden="true"> </i><br><span>смотреть макет </span></a><img src="usercontent/img/project_music.jpg" alt="Магазин аудиотехники"></div>
               <div class="portfolio-item__title"><a href="#">Магазин аудиотехники</a></div>
               <div class="portfolio-item__descr">Верстка страниц для магазина винтажной аудиотехники.</div>
@@ -212,7 +212,7 @@
                   <li class="contacts-list__item">
                     <div class="contacts-list__title">адрес</div>
                     <div class="contacts-list__descr">
-                      <p><a href="#">625000, Россия, Тюмень</a></p>
+                      <p>625000, Россия, Тюмень</p>
                     </div>
                   </li>
                 </ul>
@@ -220,7 +220,7 @@
             </div>
             <ul class="contacts-list">
               <li class="contacts-list__item">
-                <div class="contacts-list__title">ссоциальные сети
+                <div class="contacts-list__title">социальные сети
                   <div class="contacts-list__descr">
                     <div class="social-icons"><a class="fa fa-vk" href="https://vk.com/id1908108" aria-hidden="true" target="_blank"></a><a class="fa fa-instagram" href="https://www.instagram.com/scriptolog/" aria-hidden="true" target="_blank"></a><a class="fa fa-github" href="https://github.com/javafvr" aria-hidden="true" target="_blank"></a><a class="fa fa-codepen" href="https://codepen.io/inet72/" aria-hidden="true" target="_blank"></a><a class="fa fa-facebook" href="https://www.facebook.com/scriptolog" aria-hidden="true" target="_blank"></a></div>
                   </div>
@@ -229,13 +229,29 @@
             </ul>
           </div>
           <div class="col-sm-6 col-lg-6">
-            <div class="heading heading--medium">Связаться со мной</div>
+            <div class="heading heading--medium heading--white">Связаться со мной</div>
+            <form class="contact-form">
+              <input class="contact-form__input" type="text" name="name" placeholder="Имя">
+              <input class="contact-form__input" type="text" name="email" placeholder="e-mail">
+              <div class="wrapper">
+                <input class="contact-form__input contact-form__input--col-6" type="text" name="skype" placeholder="Skype">
+                <input class="contact-form__input contact-form__input--col-6" type="text" name="phone" placeholder="Телефон">
+              </div>
+              <div class="contact-form__bg-pencil">
+                <textarea class="contact-form__textarea" placeholder="Ваше сообщение"></textarea>
+              </div>
+              <input class="contact-form__submit" type="submit" name="" value="Отправить">
+            </form>
           </div>
         </div>
       </div>
     </div>
-    <div class="block-bg-copyright"> 
-      <div class="block">© 2018 Дмитрий Долганов</div>
+    <div class="copyright"> 
+      <div class="container"> 
+        <p class="copyright__label">© 2018 Дмитрий Долганов</p>
+        <p>Веб-разработчик из Тюмени, занимаюсь версткой и созданием сайтов. </p>
+        <p>Этот сайт сделал в рамках прохождения обучения по верстке на курсах от <a href="http://www.WebCademy.ru" target="_blank">WebCademy.ru</a></p>
+      </div>
     </div>
   </body>
   <script src="libs/jquery/jquery-1.11.2.min.js"></script>

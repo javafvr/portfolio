@@ -1,0 +1,16 @@
+.social-icons {
+  padding-top: 19px;
+  font-size: 32px;
+  color: #FFF;
+}
+.social-icons .fa {
+  margin-right: 30px;
+  margin-bottom: 20px;
+}
+.social-icons .fa:last-child {
+  margin-right: 0;
+}
+.social-icons a {
+  text-decoration: none;
+  border-bottom: none!important;
+}

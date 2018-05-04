@@ -184,7 +184,7 @@ html(lang='ru')
 								a(href="#") Магазин мотоциклов
 							.portfolio-item__descr Верстка лендинга для компании Indian Motorcycles.
 					.col-sm-4.mix.html-css.payed
-						.portfolio-item
+						.portfolio-item.portfolio-item--last
 							.portfolio-item__image
 								a(href="usercontent/img/full/music.jpg" rel="group" title="Магазин аудиотехники").portfolio-item__image__hover.fancybox
 									i(aria-hidden="true").fa.fa-search 
@@ -232,12 +232,11 @@ html(lang='ru')
 									li.contacts-list__item
 										.contacts-list__title адрес
 										.contacts-list__descr
-											p
-												a(href="#") 625000, Россия, Тюмень
+											p 625000, Россия, Тюмень
 						//- Social
 						ul.contacts-list
 									li.contacts-list__item
-										.contacts-list__title ссоциальные сети
+										.contacts-list__title социальные сети
 											.contacts-list__descr
 												.social-icons
 													a(href="https://vk.com/id1908108"  aria-hidden="true" target="_blank").fa.fa-vk
@@ -247,13 +246,24 @@ html(lang='ru')
 													a(href="https://www.facebook.com/scriptolog" aria-hidden="true" target="_blank").fa.fa-facebook
 						//- Contacts, feedback
 					.col-sm-6.col-lg-6
-						.heading.heading--medium Связаться со мной
+						.heading.heading--medium.heading--white Связаться со мной
+						form.contact-form
+							input(type="text" class="contact-form__input" name="name" placeholder="Имя")
+							input(type="text" class="contact-form__input" name="email" placeholder="e-mail")
+							.wrapper
+								input(type="text" class="contact-form__input contact-form__input--col-6" name="skype" placeholder="Skype")
+								input(type="text" class="contact-form__input contact-form__input--col-6" name="phone" placeholder="Телефон")
+							.contact-form__bg-pencil
+								textarea(class="contact-form__textarea" placeholder="Ваше сообщение")
+							input(type="submit" class="contact-form__submit" name="" value="Отправить")
 						//- Имя
-
-
 		//- Копирайт
-		.block-bg-copyright 
-			.block © 2018 Дмитрий Долганов
+		.copyright 
+			.container 
+				p.copyright__label © 2018 Дмитрий Долганов
+				p Веб-разработчик из Тюмени, занимаюсь версткой и созданием сайтов. 
+				p Этот сайт сделал в рамках прохождения обучения по верстке на курсах от 
+					a(href="http://www.WebCademy.ru" target="_blank") WebCademy.ru
 		//- Подвал конец
 		
 	//- Vendor scripts

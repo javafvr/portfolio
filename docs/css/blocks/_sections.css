@@ -35,6 +35,15 @@
     background-image: url('../img/bg/gear.png');
   }
 }
+.section--bg-cloud {
+  background-repeat: no-repeat;
+  background-position: right 70%;
+}
+@media (min-width: 1500px) {
+  .section--bg-cloud {
+    background-image: url('../img/bg/cloud.png');
+  }
+}
 .section--padding-smaller {
   padding-top: 26px;
   padding-bottom: 50px;
