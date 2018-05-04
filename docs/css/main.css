@@ -609,12 +609,12 @@ label.error:after {
   border-left: 12px solid transparent;
 }
 .contact-form__success {
-  background-color: #FFF;
+  background-color: #5e92b9;
   position: relative;
   display: block;
   -webkit-border-radius: 8px;
   border-radius: 8px;
-  color: #43a047;
+  color: #17ff6b;
   padding: 5px 15px;
   font-weight: 700;
   margin-bottom: 15px;
