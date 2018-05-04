@@ -15,6 +15,8 @@ html(lang='ru')
 		link(rel="stylesheet", href="fonts/font-awesome/css/font-awesome.css")
 			//- Fancy box
 		link(rel='stylesheet', href='libs/fancybox/jquery.fancybox.css')
+			//-WOW 
+		link(rel="stylesheet" href="libs/wow/animate.css")
 			//- My Styles
 		link(rel='stylesheet', href='css/main.css')
 		// FavIcons
@@ -50,7 +52,7 @@ html(lang='ru')
 						li
 							a(href="#contacts") Контакты
 				.header__centered-content
-					.user-photo.user-photo--shadow
+					.user-photo.user-photo--shadow.wow.flip
 						img(src="usercontent/img/photo-small.jpg" alt="Мое фото")
 					h1.header__title Дмитрий Долганов
 					h2.header__subtitle HTML верстальщик сайтов 
@@ -266,14 +268,14 @@ html(lang='ru')
 							input(type="hidden" name="form_subject" value="Сообщение с сайта")
 							//- END Hidden Required Fields
 
-							input(type="text" class="contact-form__input" name="name" placeholder="Имя")
-							input(type="text" class="contact-form__input" name="email" placeholder="e-mail")
+							input(type="text" class="contact-form__input wow lightSpeedIn" name="name" placeholder="Имя")
+							input(type="text" class="contact-form__input wow lightSpeedIn" name="email" placeholder="e-mail")
 							.wrapper.clearfix
-								input(type="text" class="contact-form__input contact-form__input--col-6" name="skype" placeholder="Skype")
-								input(type="text" class="contact-form__input contact-form__input--col-6" name="phone" placeholder="Телефон")
-							.contact-form__bg-pencil
+								input(type="text" class="contact-form__input contact-form__input--col-6 wow lightSpeedIn" name="skype" placeholder="Skype")
+								input(type="text" class="contact-form__input contact-form__input--col-6 wow lightSpeedIn" name="phone" placeholder="Телефон")
+							.contact-form__bg-pencil.wow.lightSpeedIn
 								textarea(class="contact-form__textarea" placeholder="Ваше сообщение" name="message")
-							input(type="submit" class="contact-form__submit" name="submit" value="Отправить")
+							input(type="submit" class="contact-form__submit wow zoomInLeft" name="submit" value="Отправить")
 						#answer
 						//- Имя
 		//- Копирайт
@@ -295,6 +297,8 @@ html(lang='ru')
 		script(src="libs/fancybox/jquery.fancybox.js")
 		script(src="libs/jquery/jquery.mousewheel-3.0.6.pack.js")
 		script(src="libs/fancybox/jquery.fancybox.pack.js")
+		//- WOW
+		script(src="libs/wow/wow.min.js")
 		//- My scripts
 		script(src='js/navigation.js')
 		script(src='js/main.js')

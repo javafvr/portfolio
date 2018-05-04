@@ -13,6 +13,7 @@
     <!--link(rel="stylesheet", href="fonts/notoserif/notoserif.css")-->
     <link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.css">
     <link rel="stylesheet" href="libs/fancybox/jquery.fancybox.css">
+    <link rel="stylesheet" href="libs/wow/animate.css">
     <link rel="stylesheet" href="css/main.css">
     <!-- FavIcons-->
     <link rel="shortcut icon" href="img/favicons/favicon-48x48.ico" type="image/x-icon">
@@ -44,7 +45,7 @@
           </ul>
         </nav>
         <div class="header__centered-content">
-          <div class="user-photo user-photo--shadow"><img src="usercontent/img/photo-small.jpg" alt="Мое фото"></div>
+          <div class="user-photo user-photo--shadow wow flip"><img src="usercontent/img/photo-small.jpg" alt="Мое фото"></div>
           <h1 class="header__title">Дмитрий Долганов</h1>
           <h2 class="header__subtitle">HTML верстальщик сайтов </h2><a class="mouse_scroll" href="#resume">
             <div class="mouse">
@@ -232,16 +233,16 @@
               <input type="hidden" name="project_name" value="Сайт Портфолио">
               <input type="hidden" name="admin_email" value="info@dolganovdn.ru, ddolganv@yandex.ru">
               <input type="hidden" name="form_subject" value="Сообщение с сайта">
-              <input class="contact-form__input" type="text" name="name" placeholder="Имя">
-              <input class="contact-form__input" type="text" name="email" placeholder="e-mail">
+              <input class="contact-form__input wow lightSpeedIn" type="text" name="name" placeholder="Имя">
+              <input class="contact-form__input wow lightSpeedIn" type="text" name="email" placeholder="e-mail">
               <div class="wrapper clearfix">
-                <input class="contact-form__input contact-form__input--col-6" type="text" name="skype" placeholder="Skype">
-                <input class="contact-form__input contact-form__input--col-6" type="text" name="phone" placeholder="Телефон">
+                <input class="contact-form__input contact-form__input--col-6 wow lightSpeedIn" type="text" name="skype" placeholder="Skype">
+                <input class="contact-form__input contact-form__input--col-6 wow lightSpeedIn" type="text" name="phone" placeholder="Телефон">
               </div>
-              <div class="contact-form__bg-pencil">
+              <div class="contact-form__bg-pencil wow lightSpeedIn">
                 <textarea class="contact-form__textarea" placeholder="Ваше сообщение" name="message"></textarea>
               </div>
-              <input class="contact-form__submit" type="submit" name="submit" value="Отправить">
+              <input class="contact-form__submit wow zoomInLeft" type="submit" name="submit" value="Отправить">
             </form>
             <div id="answer"></div>
           </div>
@@ -263,6 +264,7 @@
     <script src="libs/fancybox/jquery.fancybox.js"></script>
     <script src="libs/jquery/jquery.mousewheel-3.0.6.pack.js"></script>
     <script src="libs/fancybox/jquery.fancybox.pack.js"></script>
+    <script src="libs/wow/wow.min.js"></script>
     <script src="js/navigation.js"></script>
     <script src="js/main.js"></script>
   </body>
