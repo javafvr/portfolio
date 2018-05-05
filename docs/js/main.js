@@ -1,6 +1,13 @@
 $(document).ready(function() {
 	// WOW анимация
-	new WOW().init();
+	wow = new WOW({
+		boxClass:     'wow',      // default
+		animateClass: 'animated', // default
+		offset:       50,          // default
+		mobile:       true,       // default
+		live:         true        // default
+		});
+	wow.init();
 	
 	//slide2id - плавная прокрутка по ссылкам внутри страницы
 	$("nav a,a[href='#top'],a[rel='m_PageScroll2id'],a.PageScroll2id, a.mouse_scroll").mPageScroll2id({
