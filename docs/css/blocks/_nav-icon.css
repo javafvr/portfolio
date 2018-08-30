@@ -93,7 +93,7 @@
   transform: rotate(45deg);
 }
 .cmn-toggle-switch__htx.active span::after {
-  bottom: 0;
+  bottom: -1px;
   height: 9px;
   width: 28px;
   -webkit-border-radius: 3px;
