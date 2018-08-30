@@ -1,0 +1,14 @@
+.contacts {
+  color: #FFF;
+  background-color: #065a97;
+}
+.contacts p,
+.contacts a {
+  color: #FFF;
+  border-bottom: 1px dotted;
+}
+.contacts__descr {
+  font-size: 16px;
+  line-height: 28px;
+  color: #FFF;
+}

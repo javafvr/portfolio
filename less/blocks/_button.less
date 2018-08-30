@@ -12,14 +12,37 @@
 	color: #FFF;
 	background-color: @headingColor;
 	box-shadow: 0px 3px 15px 0px rgba(0, 82, 194, 1);
-	
+
+	-webkit-transition: all 0.4s ease-in;
+	   -moz-transition: all 0.4s ease-in;
+	    -ms-transition: all 0.4s ease-in;
+	     -o-transition: all 0.4s ease-in;
+	        transition: all 0.4s ease-in;
+
 	.fa{
 		font-size: 18px;
 		margin-right: 8px;
 	}
+	
+	&:hover{
+		outline: none!important;
+		color: #065a97;
+		background-color: #FFF;
+		border-color: #FFF;	
+	}
+
+	&:active {
+		outline: none!important;
+		color: @yellow;
+		background: #065a97;
+		border-color: @yellow;	
+	}
+	
+	&:focus{
+		color: #FFF;
+	}
 
 		
-	&:hover, &:focus, &:active{
-		
-	}
+	
 }
+	a.button{text-decoration: none;}

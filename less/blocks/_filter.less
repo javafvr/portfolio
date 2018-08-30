@@ -8,7 +8,7 @@
 	
 	@media (min-width: 768px){
 		padding-top: 8px;
-		margin-bottom: 50px;
+		margin-bottom: 56px;
 	}
 
 .filter-block__block{
@@ -46,6 +46,9 @@
 }
 
 .filter-block__button{
+	 -webkit-transition: border-color 1000ms ease-in-out;
+		-moz-transition: border-color 1000ms ease-in-out;
+			 transition: border-color 1000ms ease-in-out;
 	display: inline-block;
 	padding: 7px 30px 8px;
 	cursor: pointer;
@@ -82,6 +85,18 @@
 }
  
 }
+
+#portfolio-projects{
+	text-align: center;
+	@media (min-width:768px){
+	text-align: left;
+	}
+	
+}
+
+#portfolio-projects .mix{
+	display:none;
+	text-align: left;
 
 #portfolio-projects .mix{
 	display:none

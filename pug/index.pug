@@ -15,6 +15,8 @@ html(lang='ru')
 		link(rel="stylesheet", href="fonts/font-awesome/css/font-awesome.css")
 			//- Fancy box
 		link(rel='stylesheet', href='libs/fancybox/jquery.fancybox.css')
+			//-WOW 
+		link(rel="stylesheet" href="libs/wow/animate.css")
 			//- My Styles
 		link(rel='stylesheet', href='css/main.css')
 		// FavIcons
@@ -37,8 +39,11 @@ html(lang='ru')
 		.header
 			.header__inner
 				nav.navigation
-					.navigation__toggle.navigation__toggle--fixed
-						i(aria-hidden="true").fa.fa-bars
+					//- Navigation icon
+					//- .navigation__toggle.navigation__toggle--fixed
+					//- 	i(aria-hidden="true").fa.fa-bars
+					button#navigation__button.cmn-toggle-switch.cmn-toggle-switch__htx
+						span toggle menu
 					ul.navigation__list
 						li
 							a(href="#resume") Резюме
@@ -47,7 +52,7 @@ html(lang='ru')
 						li
 							a(href="#contacts") Контакты
 				.header__centered-content
-					.user-photo.user-photo--shadow
+					.user-photo.user-photo--shadow.wow.rotateIn
 						img(src="usercontent/img/photo-small.jpg" alt="Мое фото")
 					h1.header__title Дмитрий Долганов
 					h2.header__subtitle HTML верстальщик сайтов 
@@ -60,7 +65,7 @@ html(lang='ru')
 							span.m_scroll_arrows.doi
 							span.m_scroll_arrows.trei
 		//- Резюме
-		.section.section--bottom-line.section--bg-laptop#resume
+		.section.section--bottom-line.section--bg-laptop#resume.wow.fadeIn
 			.container
 				//- Фото с резюме
 				.row
@@ -69,11 +74,18 @@ html(lang='ru')
 							img(src="usercontent/img/photo-big.jpg" alt="Мое фото")
 					.col-sm-10.col-lg-9
 						.heading Резюме
+						//- p
+						//- 	strong Дмитрий Долганов
+						//- 	br
+						//- 	|   36 лет, Тюмень, Россия
+						//- 	p Родился и вырос. Закончил три класса церковно-приходской IT школы. После чего «активно занимался самообразованием».
 						p
 							strong Дмитрий Долганов
 							br
-							|   36 лет, Тюмень, Россия
-							p Родился и вырос. Закончил три класса церковно-приходской IT школы. После чего «активно занимался самообразованием».
+							| 36 лет, Тюмень, Россия
+						p
+							| IT специалист c 2003 года, программист с 2006 года. После курсов по верстке от webcademy.ru работаю на фрилансе. В работах использую БЭМ методологию, препроцессор LESS и шаблонизатор PUG.
+
 
 						//- Опыт и образование
 						.row
@@ -107,7 +119,7 @@ html(lang='ru')
 										.definition-list__def Сентбярь 1999 — Май 2003
 										.definition-list__desc
 											p Тюменский Государственный колледж связи, информатики и управления, техник связи.
-						.button 
+						a.button(href="usercontent/pdf/CV(DolganovDN).pdf" download="CV")
 							i(aria-hidden="true").fa.fa-download 
 							|Скачать резюме
 		//- .line
@@ -132,90 +144,164 @@ html(lang='ru')
 					.col-sm-4.mix.html-css.tutorial
 						.portfolio-item
 							.portfolio-item__image
-								a(href="usercontent/img/full/organic.png" rel="group" title="Учебный макет Organica").portfolio-item__image__hover.fancybox
+								a(href="usercontent/img/full/organic.png"  data-fancybox-group="group1" title="Учебный макет Organica").portfolio-item__image__hover.fancybox
 									i(aria-hidden="true").fa.fa-search 
 									br
 									span смотреть макет 
 								img(src="usercontent/img/project_organica.jpg" alt="Учебный макет Organica")
 							.portfolio-item__title
-								a(href="#") Учебный макет Organica
+								a(href="usercontent/img/full/organic.png"  download="" title="Скачать") Учебный макет Organica
 							.portfolio-item__descr Верстка одностраничного сайта по PSD макету.
 					.col-sm-4.mix.bootstrap.tutorial
 						.portfolio-item
 							.portfolio-item__image
-								a(href="usercontent/img/full/apollo.png" rel="group" title="Учебный макет Аполло").portfolio-item__image__hover.fancybox
+								a(href="usercontent/img/full/apollo.png"  data-fancybox-group="group1" title="Учебный макет Аполло").portfolio-item__image__hover.fancybox
 									i(aria-hidden="true").fa.fa-search 
 									br
 									span смотреть макет 
 								img(src="usercontent/img/project_apollo.jpg" alt="Учебный макет Аполло")
 							.portfolio-item__title
-								a(href="#") Учебный макет Аполло
+								a(href="usercontent/img/full/apollo.png" download="" title="Скачать") Учебный макет Аполло
 							.portfolio-item__descr Верстка лендинга хостинг компании. Мобильная адаптивность.
 					.col-sm-4.mix.bootstrap.tutorial
 						.portfolio-item
 							.portfolio-item__image
-								a(href="usercontent/img/full/portfolio.png" rel="group" title="Личный сайт портфолио").portfolio-item__image__hover.fancybox
+								a(href="usercontent/img/full/portfolio.png"  data-fancybox-group="group1" title="Личный сайт портфолио").portfolio-item__image__hover.fancybox
 									i(aria-hidden="true").fa.fa-search 
 									br
 									span смотреть макет 
 								img(src="usercontent/img/project_portfolio.jpg" alt="Личный сайт портфолио")
 							.portfolio-item__title
-								a(href="#") Личный сайт портфолио
+								a(href="usercontent/img/full/portfolio.png" download="" title="Скачать") Личный сайт портфолио
 							.portfolio-item__descr Верстка личного сайта портфолио на котором вы сейчас находитесь. 
 					.col-sm-4.mix.html-css.payed
 						.portfolio-item
 							.portfolio-item__image
-								a(href="usercontent/img/full/car-concept.png" rel="group" title="Промо сайт автомобиля").portfolio-item__image__hover.fancybox
+								a(href="usercontent/img/full/car-concept.png"  data-fancybox-group="group1" title="Промо сайт автомобиля").portfolio-item__image__hover.fancybox
 									i(aria-hidden="true").fa.fa-search 
 									br
 									span смотреть макет 
 								img(src="usercontent/img/project_auto.jpg" alt="Промо сайт автомобиля")
 							.portfolio-item__title
-								a(href="#") Промо сайт автомобиля
+								a(href="usercontent/img/full/car-concept.png" download="" title="Скачать") Промо сайт автомобиля
 							.portfolio-item__descr Верстка сайта для презентации концепта автомобиля.
 					.col-sm-4.mix.html-css.payed
 						.portfolio-item
 							.portfolio-item__image
-								a(href="usercontent/img/full/motorcycles.jpg" rel="group" title="Магазин мотоциклов").portfolio-item__image__hover.fancybox
+								a(href="usercontent/img/full/motorcycles.jpg"  data-fancybox-group="group1" title="Магазин мотоциклов").portfolio-item__image__hover.fancybox
 									i(aria-hidden="true").fa.fa-search 
 									br
 									span смотреть макет 
 								img(src="usercontent/img/project_moto.jpg" alt="Учебный макет Organica")
 							.portfolio-item__title
-								a(href="#") Магазин мотоциклов
+								a(href="usercontent/img/full/motorcycles.jpg" download="" title="Скачать") Магазин мотоциклов
 							.portfolio-item__descr Верстка лендинга для компании Indian Motorcycles.
 					.col-sm-4.mix.html-css.payed
-						.portfolio-item
+						.portfolio-item.portfolio-item--last
 							.portfolio-item__image
-								a(href="usercontent/img/full/music.jpg" rel="group" title="Магазин аудиотехники").portfolio-item__image__hover.fancybox
+								a(href="usercontent/img/full/music.jpg"  data-fancybox-group="group1" title="Магазин аудиотехники").portfolio-item__image__hover.fancybox
 									i(aria-hidden="true").fa.fa-search 
 									br
 									span смотреть макет 
 								img(src="usercontent/img/project_music.jpg" alt="Магазин аудиотехники")
 							.portfolio-item__title
-								a(href="#") Магазин аудиотехники
+								a(href="usercontent/img/full/music.jpg" download="" title="Скачать") Магазин аудиотехники
 							.portfolio-item__descr Верстка страниц для магазина винтажной аудиотехники.
 			//- Портфолио конец
 		
 		//- Подвал
-		.block-bg
+		.block-bg.contacts.section.section--padding-smaller.section--bg-cloud
 			.container#contacts
 				.row
+					//- contacts
 					.col-sm-6.col-lg-6
-						.block Контакты Текст
+						.heading.heading--white Контакты
+						.contacts__descr 
+							p Если вы ищите специалиста по верстке сайтов, front-end разработчика в команду или для работы над проектом —  я к вашим услугам.
 						.row
+							//- e-mail, skype
 							.col-sm-12.col-lg-6
-								.block email, skype
+								ul.contacts-list
+									li.contacts-list__item 
+										.contacts-list__title email
+										.contacts-list__descr
+											p
+												a(href="mailto:inet72@gmail.com" target="_blank") inet72@gmail.com
+
+									li.contacts-list__item
+										.contacts-list__title skype
+										.contacts-list__descr
+											p
+												a(href="skype:dolganovdn?chat" target="_blank") dolganovdn
+							//- phone, address
 							.col-sm-12.col-lg-6
-								.block Телефон, адрес
-						.block Социальные сети
+								ul.contacts-list
+									li.contacts-list__item 
+										.contacts-list__title телефон
+										.contacts-list__descr
+											p
+												a(href="tel:+7(909)182-41-69" target="_blank") +7(909)182-41-69
+
+									li.contacts-list__item
+										.contacts-list__title адрес
+										.contacts-list__descr
+											p 625000, Россия, Тюмень
+						//- Social
+						ul.contacts-list
+									li.contacts-list__item
+										.contacts-list__title социальные сети
+											.contacts-list__descr
+												.social-icons
+													a(href="https://vk.com/id1908108"  aria-hidden="true" target="_blank").fa.fa-vk
+													a(href="https://www.instagram.com/scriptolog/" aria-hidden="true" target="_blank").fa.fa-instagram
+													a(href="https://github.com/javafvr" aria-hidden="true" target="_blank").fa.fa-github
+													a(href="https://codepen.io/inet72/" aria-hidden="true" target="_blank").fa.fa-codepen
+													a(href="https://www.facebook.com/scriptolog" aria-hidden="true" target="_blank").fa.fa-facebook
+						//- Contacts, feedback
 					.col-sm-6.col-lg-6
-						.block Форма связи
+						.heading.heading--medium.heading--white Связаться со мной
+						form(class="contact_form").contact-form#contact-form
+
+							//- Hidden Required Fields
+							input(type="hidden" name="project_name" value="Сайт Портфолио")
+							input(type="hidden" name="admin_email" value="info@dolganovdn.ru, ddolganv@yandex.ru")
+							input(type="hidden" name="form_subject" value="Сообщение с сайта")
+							//- END Hidden Required Fields
+
+							input(type="text" class="contact-form__input wow lightSpeedIn" name="name" placeholder="Имя")
+							input(type="text" class="contact-form__input wow lightSpeedIn" name="email" placeholder="e-mail")
+							.wrapper.clearfix
+								input(type="text" class="contact-form__input contact-form__input--col-6 wow lightSpeedIn" name="skype" placeholder="Skype")
+								input(type="text" class="contact-form__input contact-form__input--col-6 wow lightSpeedIn" name="phone" placeholder="Телефон")
+							.contact-form__bg-pencil.wow.lightSpeedIn
+								textarea(class="contact-form__textarea" placeholder="Ваше сообщение" name="message")
+							input(type="submit" class="contact-form__submit wow zoomInLeft" name="submit" value="Отправить")
+						#answer
+						//- Имя
 		//- Копирайт
-		.block-bg-copyright 
-			.block © 2018 Дмитрий Долганов
+		.copyright 
+			.container 
+				p.copyright__label © 2018 Дмитрий Долганов
+				p Веб-разработчик из Тюмени, занимаюсь версткой и созданием сайтов. 
+				p Этот сайт сделал в рамках прохождения обучения по верстке на курсах от 
+					a(href="http://www.WebCademy.ru" target="_blank") WebCademy.ru
 		//- Подвал конец
 		
+		//- Vendor scripts
+		script(src='libs/jquery/jquery-1.11.2.min.js')
+		script(src='libs/bootstrap/js/bootstrap.min.js')
+		script(src="libs/pagescroll2id/jquery.malihu.PageScroll2id.js")
+		script(src="libs/mixitup2/jquery.mixitup.min.js")
+		script(src="libs/jquery.validate/jquery.validate.js")
+		//- For fancyBox
+		script(src="libs/fancybox/jquery.fancybox.js")
+		script(src="libs/jquery/jquery.mousewheel-3.0.6.pack.js")
+		script(src="libs/fancybox/jquery.fancybox.pack.js")
+		//- WOW
+		script(src="libs/wow/wow.min.js")
+		//- My scripts
+		script(src='js/navigation.js')
+		script(src='js/main.js')
 	//- Vendor scripts
 	script(src='libs/jquery/jquery-1.11.2.min.js')
 	script(src='libs/bootstrap/js/bootstrap.min.js')
