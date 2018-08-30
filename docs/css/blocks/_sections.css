@@ -1,0 +1,28 @@
+.section {
+  padding-top: 25px;
+  padding-bottom: 40px;
+}
+@media (min-width: 768px) {
+  .section {
+    padding-top: 50px;
+    padding-bottom: 60px;
+  }
+}
+@media (min-width: 1200px) {
+  .section {
+    padding-top: 70px;
+    padding-bottom: 90px;
+  }
+}
+.section--bottom-line {
+  border-bottom: 1px solid #e9eff3;
+}
+.section--bg-laptop {
+  background-repeat: no-repeat;
+  background-position: right 70%;
+}
+@media (min-width: 1500px) {
+  .section--bg-laptop {
+    background-image: url('../img/bg/laptop.png');
+  }
+}
