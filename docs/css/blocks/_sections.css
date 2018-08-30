@@ -26,3 +26,28 @@
     background-image: url('../img/bg/laptop.png');
   }
 }
+.section--bg-gear {
+  background-repeat: no-repeat;
+  background-position: left 55%;
+}
+@media (min-width: 1500px) {
+  .section--bg-gear {
+    background-image: url('../img/bg/gear.png');
+  }
+}
+.section--padding-smaller {
+  padding-top: 26px;
+  padding-bottom: 50px;
+}
+@media (min-width: 768px) {
+  .section--padding-smaller {
+    padding-top: 41px;
+    padding-bottom: 65px;
+  }
+}
+@media (min-width: 1200px) {
+  .section--padding-smaller {
+    padding-top: 62px;
+    padding-bottom: 67px;
+  }
+}
