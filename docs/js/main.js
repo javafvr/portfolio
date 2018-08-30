@@ -33,7 +33,7 @@ $(document).ready(function() {
 			}
 	});
 
-	// jquery validate
+  // jquery validate
 	$('#contact-form').validate({
 		rules: {
 			name: { required:true },
@@ -79,7 +79,4 @@ $(document).ready(function() {
 			
 		});
 	}
-
-
-
 });

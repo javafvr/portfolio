@@ -195,6 +195,9 @@ p {
 .heading--padding-top {
   padding-top: 12px;
 }
+.heading--center {
+  text-align: center;
+}
 .definition-list {
   margin: 0  0 43px;
   padding: 0;
@@ -253,7 +256,6 @@ p {
   .filter-block .filter-block__element {
     margin-bottom: 0;
     margin-right: 0px;
-    display: inline-block;
   }
 }
 @media (min-width: 1200px) {
